@@ -9,6 +9,7 @@
   --color-primary: #191d2b;
   --shadow: 0 3px 15px rgba(0, 0, 0, .4);
   --transition: all .4s ease-in-out;
+  --color-secondary: rgba(255, 65, 46, 1);
 }
 
 body {
@@ -33,7 +34,6 @@ section {
   width: 100%;
   left: 0;
   top: 0;
-  padding: 3rem 18rem;
   overflow: hidden;
 }
 
@@ -128,12 +128,12 @@ header {
 }
 
 .controls .active--btn {
-  background-color: green !important;
+  background-color: var(--color-secondary) !important;
   transition: var(--transition);
 }
 
 .controls .active--btn > i {
-  background-color: green !important;
+  background-color: var(--color-secondary) !important;
   transition: var(--transition);
   color: white !important;
 }
@@ -177,7 +177,7 @@ header {
   font-size: 3rem;
 }
 .header--content .right--header .name span {
-  color: green;
+  color: var(--color-secondary);
 }
 .header--content .right--header p {
   margin: 1.5rem 0;
@@ -185,29 +185,33 @@ header {
 }
 
 /*independent components*/
-.main--button {
+.button--container {
+  display: flex;
+  align-self: flex-start;
+}
+.button--container .main--button {
   border-radius: 30px;
   color: inherit;
   font-weight: 600;
   position: relative;
-  border: 1px solid green;
+  border: 1px solid var(--color-secondary);
   display: flex;
   align-self: flex-start;
   align-items: center;
   overflow: hidden;
 }
-.main--button .button--text {
+.button--container .main--button .button--text {
   padding: 0 2rem;
 }
-.main--button .button--icon {
-  background-color: green;
+.button--container .main--button .button--icon {
+  background-color: var(--color-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   padding: 1rem;
 }
-.main--button::before {
+.button--container .main--button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -216,10 +220,42 @@ header {
   transition: var(--transition);
   z-index: -1;
 }
-.main--button:hover::before {
+.button--container .main--button:hover::before {
   width: 100%;
   height: 100%;
-  background-color: green;
+  background-color: var(--color-secondary);
   transform: translateX(0);
   transition: var(--transition);
+}
+
+.main--container {
+  display: flex;
+  align-self: flex-start;
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  justify-content: center;
+  align-items: center;
+}
+.main--container .main--title {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.main--container .main--title .main--text {
+  padding: 0 2rem;
+}
+.main--container .main--title .main--icon {
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
 }/*# sourceMappingURL=index.css.map */
