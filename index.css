@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --color-primary : #191d2b;
+    --shadow : 0 3px 15px rgba(0, 0, 0, .4);
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: var(--color-primary);
+    font-size: 1.1rem;
+    color: white;
+    transition: all .4s ease-in-out;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+section {
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+}
+
+header {
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+.section {
+    transform: translateY(-100%) scale(0);
+    transition: all .4s ease-in-out;
+    background-color: var(--color-primary);
+}
+
+.section--1 {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.section--2 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: aliceblue;
+}
+
+.section--3 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: aquamarine;
+}
+
+.section--4 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: blueviolet;
+}
+
+.section--5 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: coral;
+}
+
+.controls {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .control {
+    padding: 1rem;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    margin: .7rem 0;
+    box-shadow: var(--shadow);
+}
+
+.active {
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) scaleY(0)
+        }
+        100% {
+            transform: translateY(0) scaleY(1)
+        }
+        
+    }
+}
+
+.control > i{
+    font-size: 1.2rem;
+    color: rgb(156, 156, 156);
+    pointer-events: none;
+}
+
+.controls .active--btn{
+    background-color: green !important;
+    transition: all .4s ease-in-out;
+}
+
+.controls .active--btn > i{
+    background-color: green !important;
+    transition: all .4s ease-in-out;
+    color: white !important;
+}
