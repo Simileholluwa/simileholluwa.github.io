@@ -9,7 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link href="index.css" rel="stylesheet"
+    <link href="./styles/index.css" rel="stylesheet"
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +20,37 @@
   </head>
   <body class="main--content">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <header class="section section--1 home active" id="home">
 
+    <header class="section section--1 home active" id="home">
+        <div class="header--content">
+
+          <div class="left--header">
+            <div class="header--shape"></div>
+            <div class="image">
+              <img src="./images/me.png" alt="" >
+            </div>
+          </div>
+
+          <div class="right--header">
+            <h1 class="name">
+              Hi, I'm <span>Ajanaku Oluwatosin Ezekiel.</span>
+            </h1>
+            <h1>
+              A Mobile & Web Developer.
+            </h1>
+            <p>
+              I develop beautiful, interactive and fully functional websites, web pages and mobile applications. 
+              My mobile apps are developed using flutter for front end, and firebase for backend.
+              My websites are built using reactjs for frontend and firbase for backend.
+            </p>
+            <a href="" class="main--button">
+              <span class="button--text">
+                Download CV
+              </span>
+              <span class="button--icon"><i class="fas fa-download"></i></span>
+            </a>
+          </div>
+        </div>
     </header>
 
     <main>
@@ -57,6 +86,6 @@
         </div>
     </div>
 
-    <script src="index.js" type="text/javascript"></script>
+    <script src="./js/index.js" type="text/javascript"></script>
   </body>
 </html>
