@@ -18,7 +18,6 @@ body {
   font-size: 1.1rem;
   color: white;
   transition: var(--transition);
-  overflow: hidden;
 }
 
 a {
@@ -30,11 +29,11 @@ a {
 
 section {
   position: absolute;
-  min-height: 100vh;
   width: 100%;
+  height: 100vh;
   left: 0;
   top: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 header {
@@ -74,6 +73,7 @@ header {
   transform: translateY(0) scale(1);
 }
 
+/* Controls */
 .controls {
   position: fixed;
   z-index: 10;
@@ -182,6 +182,187 @@ header {
 .header--content .right--header p {
   margin: 1.5rem 0;
   line-height: 2rem;
+  color: grey;
+}
+
+/* Profile */
+.profile--container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 7rem 12rem 3rem 4rem;
+}
+.profile--container .right--profile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.profile--container .right--profile .profile--item {
+  border: 1px solid grey;
+  border-radius: 5px;
+  transition: var(--transition);
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.profile--container .right--profile .profile--item:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 3px solid --color-secondary;
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.3);
+}
+.profile--container .right--profile .profile--item .profile--text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.profile--container .right--profile .profile--item .profile--text .large--text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+.profile--container .right--profile .profile--item .profile--text .small--text {
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: grey;
+  letter-spacing: 2px;
+}
+.profile--container .right--profile .profile--item .profile--text .small--text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2rem;
+  height: 2px;
+  background-color: grey;
+}
+.profile--container .left--profile {
+  padding-right: 5rem;
+}
+.profile--container .left--profile p {
+  line-height: 2rem;
+  padding: 1rem;
+  color: grey;
+}
+.profile--container .left--profile h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.profile--stats {
+  padding: 1rem 12rem 3rem 4rem;
+}
+.profile--stats .progress--bars {
+  display: grid;
+  padding-left: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.profile--stats .progress--bars .progress--bar {
+  display: flex;
+  flex-direction: column;
+}
+.profile--stats .progress--bars .progress--bar .progress--title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.profile--stats .progress--bars .progress--bar .progress--container {
+  display: flex;
+  align-items: center;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress--text {
+  color: grey;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress {
+  width: 100%;
+  border-radius: 5px;
+  height: 0.45rem;
+  background-color: grey;
+  margin-left: 1rem;
+  position: relative;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress span {
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transition: var(--transition);
+  width: 90%;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress .html {
+  width: 90%;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress .css {
+  width: 70%;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress .js {
+  width: 75%;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress .dart {
+  width: 80%;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress .flutter {
+  width: 90%;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress .firebase {
+  width: 80%;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress .react {
+  width: 80%;
+}
+.profile--stats .progress--bars .progress--bar .progress--container .progress .go {
+  width: 50%;
+}
+
+.timeline {
+  padding: 1rem 12rem 3rem 4rem;
+}
+.timeline .timeline--container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding-left: 4rem;
+}
+.timeline .timeline--container .timeline--item {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 1px solid grey;
+}
+.timeline .timeline--container .timeline--item .timeline--icon {
+  position: absolute;
+  left: -27px;
+  top: 0;
+  background-color: var(--color-secondary);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline .timeline--container .timeline--item .timeline--icon i {
+  font-size: 1.3rem;
+}
+.timeline .timeline--container .timeline--item .timeline--duration {
+  padding: 0.2rem 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.timeline .timeline--container .timeline--item h5 {
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.timeline .timeline--container .timeline--item h5 span {
+  color: grey;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.timeline .timeline--container .timeline--item p {
+  color: grey;
 }
 
 /*independent components*/
@@ -232,7 +413,7 @@ header {
   display: flex;
   align-self: flex-start;
   position: fixed;
-  top: 3%;
+  top: 2%;
   right: 3%;
   justify-content: center;
   align-items: center;
@@ -258,4 +439,11 @@ header {
   justify-content: center;
   border-radius: 50%;
   padding: 1rem;
+}
+
+.stats--title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: left;
+  padding-bottom: 1.5rem;
 }/*# sourceMappingURL=index.css.map */
