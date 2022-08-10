@@ -10,13 +10,17 @@
     --shadow : 0 3px 15px rgba(0, 0, 0, .4);
     --transition: all .4s ease-in-out;
     --color-secondary: rgba(255, 65, 46, 1);
+    --icon-inactive: rgb(156, 156, 156);
+    --icon-active: white;
+    --text-color: white;
+    --muted-text: grey;
 }
 
 body {
     font-family: 'Jost', sans-serif;
     background-color: var(--color-primary);
     font-size: 1.1rem;
-    color: white;
+    color: var(--text-color);
     transition: var(--transition);
 }
 
@@ -37,9 +41,20 @@ section {
 
 header {
     min-height: 100vh;
-    color: white;
+    color: var(--text-color);
     overflow: hidden;
     
+}
+
+.light--mode{
+    --color-primary : white;
+    --shadow : 0 3px 15px rgba(145, 145, 145, 0.4);
+    --transition: all .4s ease-in-out;
+    --color-secondary: rgba(255, 65, 46, 1);
+    --icon-inactive: rgb(156, 156, 156);
+    --icon-active: white;
+    --text-color: black;
+    --muted-text: rgb(160, 160, 160);
 }
 
 .section {
@@ -116,19 +131,48 @@ header {
 
 .control > i{
     font-size: 1.2rem;
-    color: rgb(156, 156, 156);
+    color: var(--icon-inactive);
     pointer-events: none;
 }
 
-.controls .active--btn{
+.active--btn{
     background-color: var(--color-secondary) !important;
     transition: var(--transition);
+    i{
+        color: var(--icon-active) !important;
+    }
+    
 }
 
 .controls .active--btn > i{
     background-color: var(--color-secondary) !important;
     transition: var(--transition);
-    color: white !important;
+    color: var(--icon-active);
+}
+
+.theme--button {
+    bottom: 5%;
+    right: 3%;
+    position: fixed;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    box-shadow: var(--shadow);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .7rem 0;
+    transition: all .1s ease-in-out;
+    &:active {
+        transform: translateY(-5px);
+    }
+    i{
+        font-size: 1.5rem;
+        pointer-events: none;
+        color: var(--icon-inactive);
+    }
 }
 
 /* Header */
@@ -136,6 +180,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100%;
+    padding-top: 5rem;
     .left--header {
         display: flex;
         align-items: center;
@@ -174,7 +219,7 @@ header {
         p{
             margin: 1.5rem 0;
             line-height: 2rem;
-            color: grey;
+            color: var(--muted-text);
         }
     }
 
@@ -190,7 +235,7 @@ header {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
         .profile--item{
-            border: 1px solid grey;
+            border: 1px solid var(--muted-text);
             border-radius: 5px;
             transition: var(--transition);
             box-shadow: 1px 2px 15px rgba(0, 0, 0, .1);
@@ -215,7 +260,7 @@ header {
                    position: relative;
                    text-transform: uppercase;
                    font-size: 1.2rem;
-                   color: grey;
+                   color: var(--muted-text);
                    letter-spacing: 2px;
                    &::before{
                     content: '';
@@ -224,7 +269,7 @@ header {
                     top: 15px;
                     width: 2rem;
                     height: 2px;
-                    background-color: grey;
+                    background-color: var(--muted-text);
                    } 
                 }
             }
@@ -235,7 +280,7 @@ header {
         p{
             line-height: 2rem;
             padding: 1rem;
-            color: grey;
+            color: var(--muted-text);
         }
         h4 {
             font-size: 2rem;
@@ -261,7 +306,7 @@ header {
                 display: flex;
                 align-items: center;
                 .progress--text {
-                    color: grey;
+                    color: var(--muted-text);
                 }
                 .progress {
                     width: 100%;
@@ -320,7 +365,7 @@ header {
         .timeline--item {
             position: relative;
             padding-left: 3rem;
-            border-left: 1px solid grey;
+            border-left: 1px solid var(--muted-text);
             
             .timeline--icon {
                 position: absolute;
@@ -334,6 +379,7 @@ header {
                 align-items: center;
                 justify-content: center;
                 i {
+                    color: var(--icon-active);
                     font-size: 1.3rem;
                 }
             }
@@ -349,13 +395,13 @@ header {
                 font-size: 1.3rem;
                 font-weight: 600;
                 span {
-                    color: grey;
+                    color: var(--muted-text);
                     font-weight: 500;
                     font-size: 1.2rem;
                 }
             }
             p {
-                color: grey;
+                color: var(--muted-text);
             }
         }
    } 
@@ -386,6 +432,7 @@ header {
             justify-content: center;
             border-radius: 50%;
             padding: 1rem;
+            color: var(--icon-active);
         }
         &::before{
             content: '';
@@ -436,6 +483,7 @@ header {
             justify-content: center;
             border-radius: 50%;
             padding: 1rem;
+            color: var(--icon-active);
         }
     }
 }

@@ -11,6 +11,8 @@ function PageTransitions(){
             this.className += 'active--btn';
             })
     }  
+
+
     allSections[0].addEventListener('click', (e) => {
         const id = e.target.dataset.id;
         if(id){
@@ -27,6 +29,13 @@ function PageTransitions(){
           element.classList.add('active');
 
         }
+      })
+
+      const themeButton = document.querySelector('.theme--button');
+      themeButton.addEventListener('click', ()=>{
+        let element = document.body;
+        element.classList.toggle('light--mode');
+        themeButton.classList.toggle('active--btn');
       })
 }
 
