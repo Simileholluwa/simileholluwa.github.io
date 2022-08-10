@@ -54,7 +54,7 @@ header {
     --icon-inactive: rgb(156, 156, 156);
     --icon-active: white;
     --text-color: black;
-    --muted-text: rgb(160, 160, 160);
+    --muted-text: rgb(116, 116, 116);
 }
 
 .section {
@@ -194,6 +194,7 @@ header {
             background-color: var(--color-primary);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            
             img{
                 width: 100%;
                 height: 100%;
@@ -384,10 +385,14 @@ header {
                 }
             }
             .timeline--duration {
-                padding: .2rem 0;
+                padding: .3rem .6rem;
                 font-size: .8rem;
                 text-transform: uppercase;
                 font-weight: 500;
+                border-radius: 10px;
+                display: inline-block;
+                box-shadow: var(--shadow);
+                color: var(--text-color);
             }
             h5 {
                 padding: 1rem 0;

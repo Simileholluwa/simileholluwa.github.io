@@ -53,6 +53,7 @@
         padding: 0 1.2rem 3rem 1.2rem;
         .progress--bars {
             padding-left: 1rem;
+            grid-template-columns: 1fr;
         }
     }
     .stats--title {

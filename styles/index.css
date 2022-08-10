@@ -53,7 +53,7 @@ header {
   --icon-inactive: rgb(156, 156, 156);
   --icon-active: white;
   --text-color: black;
-  --muted-text: rgb(160, 160, 160);
+  --muted-text: rgb(116, 116, 116);
 }
 
 .section {
@@ -390,10 +390,14 @@ header {
   font-size: 1.3rem;
 }
 .timeline .timeline--container .timeline--item .timeline--duration {
-  padding: 0.2rem 0;
+  padding: 0.3rem 0.6rem;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: var(--shadow);
+  color: var(--text-color);
 }
 .timeline .timeline--container .timeline--item h5 {
   padding: 1rem 0;
@@ -549,6 +553,7 @@ header {
   }
   .profile--stats .progress--bars {
     padding-left: 1rem;
+    grid-template-columns: 1fr;
   }
   .stats--title {
     padding-bottom: 1rem;
