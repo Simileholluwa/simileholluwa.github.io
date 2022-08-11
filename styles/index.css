@@ -545,6 +545,7 @@ header {
   }
   .profile--container .left--profile p {
     padding-right: 0;
+    padding-left: 0;
   }
   .profile--stats {
     width: 90%;
