@@ -13,7 +13,7 @@
         padding-top: 6rem;
     }
     .right--header{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         .name {
             font-size: 2rem !important;
@@ -28,16 +28,17 @@
     /* Profile */
     .profile--container{
         grid-template-columns: 1fr;
-        padding: 6rem 1.2rem 3rem 1.2rem;
+        padding: 6rem 1rem 3rem 1rem;
+        width: 100%;
         .right--profile {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             padding-top: 2.5rem;
             grid-template-columns: 1fr;
         }
         .left--profile {
             margin: 0 auto;
-            width: 90%;
+            width: 100%;
             padding-right: 0;
             h4 {
                 font-size: 1.5rem;
@@ -49,9 +50,9 @@
         }
     }
     .profile--stats {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-        padding: 0 1.2rem 3rem 1.2rem;
+        padding: 0 1rem 3rem 1rem;
         .progress--bars {
             padding-left: 1rem;
             grid-template-columns: 1fr;
@@ -63,7 +64,7 @@
     }
     .timeline {
         margin: 0 auto;
-        width: 90%;
+        width: 100%;
         padding: 0 1rem 6rem 1rem;
         .timeline--container {
             grid-template-columns: 1fr;
@@ -81,7 +82,7 @@
     .portfolios {
         grid-template-columns: 1fr;
         padding: 6rem 1rem 6rem 1rem;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -103,6 +104,9 @@
         margin: 0;
         left: 3%;
         top: 2%;
+    }
+    .button--container {
+        margin: 0 auto;
     }
 }
 
