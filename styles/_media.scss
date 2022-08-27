@@ -13,7 +13,7 @@
         padding-top: 6rem;
     }
     .right--header{
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         .name {
             font-size: 2rem !important;
@@ -29,7 +29,8 @@
     .profile--container{
         grid-template-columns: 1fr;
         padding: 6rem 1rem 3rem 1rem;
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         .right--profile {
             width: 100%;
             margin: 0 auto;
@@ -50,11 +51,10 @@
         }
     }
     .profile--stats {
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         padding: 0 1rem 3rem 1rem;
         .progress--bars {
-            padding-left: 1rem;
             grid-template-columns: 1fr;
         }
     }
@@ -64,11 +64,11 @@
     }
     .timeline {
         margin: 0 auto;
-        width: 100%;
+        width: 90%;
         padding: 0 1rem 6rem 1rem;
         .timeline--container {
             grid-template-columns: 1fr;
-            padding-left: 3rem;
+            padding-left: 1.5rem;
             .timeline--item{
                 h5{
                     font-size: 1.1rem;
@@ -79,14 +79,41 @@
             }
         }
     }
+
+    /*portfolio*/
     .portfolios {
         grid-template-columns: 1fr;
         padding: 6rem 1rem 6rem 1rem;
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
     }
 
+    /*blogs*/
+    .blogs {
+        grid-template-columns: 1fr;
+        padding: 6rem 1rem 6rem 1rem;
+        width: 90%;
+        margin: 0 auto;
+    }
 
+    .contact--content {
+        grid-template-columns: 1fr;
+        width: 90%;
+        padding: 6rem 1rem 6rem 1rem;
+        margin: 0 auto;
+        .right--contact {
+            .php-email-form {
+                .i-c-2{
+                    flex-direction: column;
+                    :last-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /*general*/
     .controls {
         top: auto;
         bottom: 0;
