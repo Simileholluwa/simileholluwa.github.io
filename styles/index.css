@@ -920,7 +920,7 @@ header {
   /*blogs*/
   .blogs {
     grid-template-columns: 1fr;
-    padding: 6rem 1rem 6rem 1rem;
+    padding: 6rem 1rem 7rem 1rem;
     width: 90%;
     margin: 0 auto;
   }
