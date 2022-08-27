@@ -575,14 +575,14 @@ header {
   padding-bottom: 20px;
 }
 .contact--content .left--contact .section--title h2 {
-  font-size: 1.5rem;
-  color: var(--color-secondary);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--text-color);
   padding-bottom: 0.5rem;
 }
-.contact--content .left--contact .section--title h4 {
-  font-size: 1rem;
+.contact--content .left--contact .section--title p {
   color: var(--muted-text);
-  padding-bottom: 0.5rem;
+  line-height: 2rem;
 }
 .contact--content .left--contact .info {
   width: 100%;
@@ -682,7 +682,7 @@ header {
 .contact--content .right--contact .php-email-form .form-group label {
   color: var(--muted-text);
   font-size: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem !important;
   font-weight: 600;
   font-family: inherit;
 }
@@ -843,7 +843,7 @@ header {
   }
   .header--content {
     grid-template-columns: 1fr;
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
     padding-top: 6rem;
   }
   .right--header {
@@ -935,6 +935,15 @@ header {
   }
   .contact--content .right--contact .php-email-form .i-c-2 :last-child {
     margin-left: 0;
+  }
+  .contact--content .right--contact .php-email-form .submit--button {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact--content .left--contact .section--title h2 {
+    font-size: 1.5rem;
   }
   /*general*/
   .controls {
