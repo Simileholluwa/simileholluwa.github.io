@@ -94,11 +94,11 @@
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(to bottom right,
-      hsl(240, 1%, 75%) 3%,
-      hsl(0, 0%, 81%) 97%);
+      hsl(240, 1%, 90%) 0%,
+      hsl(0, 0%, 90%) 0%);
   --bg-gradient-jet: linear-gradient(to bottom right,
-      hsla(240, 1%, 82%, 0.251) 0%,
-      hsla(240, 2%, 89%, 0) 100%), hsl(240, 2%, 87%);
+      hsla(240, 1%, 90%) 0%,
+      hsla(0, 0%, 90%) 0%);
   --bg-gradient-yellow-1: linear-gradient(to bottom right,
       hsl(0, 100%, 71%) 0%,
       hsla(36, 100%, 69%, 0) 50%);
@@ -107,18 +107,18 @@
       hsla(0, 100%, 68%, 0) 59.86%), hsl(240, 2%, 87%);
   --border-gradient-onyx: linear-gradient(to bottom right,
       hsl(0, 0%, 75%) 0%,
-      hsla(0, 0%, 75%, 0) 50%);
+      hsla(0, 0%, 75%, 0) 0%);
   --text-gradient-yellow: linear-gradient(to right,
       hsl(0, 100%, 72%),
       hsl(0, 100%, 68%));
 
   /* solid */
 
-  --jet: hsl(0, 0%, 78%);
+  --jet: hsl(0, 0%, 80%);
   --onyx: hsl(240, 1%, 83%);
-  --eerie-black-1: hsl(240, 2%, 87%);
-  --eerie-black-2: hsl(240, 2%, 88%);
-  --smoky-black: hsl(0, 0%, 93%);
+  --eerie-black-1: hsl(240, 2%, 90%);
+  --eerie-black-2: hsl(0, 0%, 100%);
+  --smoky-black: hsl(0, 0%, 100%);
   --white-1: hsl(0, 0%, 0%);
   --white-2: hsl(0, 0%, 2%);
   --orange-yellow-crayola: hsl(0, 100%, 72%);
@@ -332,8 +332,8 @@ article {
 
 .content-card {
   position: relative;
-  background: var(--border-gradient-onyx);
   padding: 15px;
+  border: 1px solid var(--jet);
   padding-top: 45px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
@@ -345,7 +345,6 @@ article {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
 }
@@ -392,7 +391,7 @@ main {
 
       .title {
         color: var(--white-1);
-        background: var(--onyx);
+        background: var(--bg-gradient-onyx);
         font-size: var(--fs-8);
         font-weight: var(--fw-300);
         width: max-content;
@@ -414,7 +413,6 @@ main {
       cursor: pointer;
       border-radius: 0 15px;
       color: var(--orange-yellow-crayola);
-      background: var(--border-gradient-onyx);
       padding: 10px;
       box-shadow: var(--shadow-2);
       transition: var(--transition-1);
@@ -429,7 +427,6 @@ main {
         position: absolute;
         inset: 1px;
         border-radius: inherit;
-        background: var(--bg-gradient-jet);
         transition: var(--transition-1);
         z-index: -1;
       }
@@ -600,8 +597,8 @@ main {
 
     .service-item {
       position: relative;
-      background: var(--border-gradient-onyx);
       padding: 20px;
+      border: 1px solid var(--jet);
       border-radius: 14px;
       box-shadow: var(--shadow-2);
       z-index: 1;
@@ -611,7 +608,6 @@ main {
         content: "";
         position: absolute;
         inset: 1px;
-        background: var(--bg-gradient-jet);
         border-radius: inherit;
         z-index: -1;
       }
