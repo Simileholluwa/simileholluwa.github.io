@@ -561,8 +561,9 @@ main {
 .service .service-list .service-item .service-icon-box {
   margin-bottom: 10px;
 }
-.service .service-list .service-item .service-icon-box img {
+.service .service-list .service-item .service-icon-box ion-icon {
   margin: auto;
+  font-size: 70px;
   color: var(--orange-yellow-crayola);
 }
 .service .service-list .service-item .service-item-text {
