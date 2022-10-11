@@ -330,7 +330,7 @@ article.active {
 }
 
 main {
-  margin: 15px 12px;
+  margin: 10px;
   margin-bottom: 75px;
   min-width: 259px;
 }
@@ -339,7 +339,7 @@ main {
  ----- ASIDE -----
 */
 .sidebar {
-  margin: 10px;
+  margin-bottom: 10px;
   max-height: 435px;
   overflow: hidden;
   transition: var(--transition-2);
@@ -1323,7 +1323,7 @@ article {
    * #MAIN
    */
   main {
-    margin-top: 60px;
+    margin-top: 20px;
     margin-bottom: 100px;
   }
   /**
@@ -1528,5 +1528,286 @@ article {
   }
   .contact .contact-form .form .form-btn ion-icon {
     font-size: 18px;
+  }
+}
+/*
+ ----- MEDIA QUERY  768px-----
+*/
+@media (min-width: 768px) {
+  /**
+   * REUSED STYLE
+   */
+  .sidebar,
+article {
+    width: 700px;
+  }
+  .has-scrollbar::-webkit-scrollbar-button {
+    width: 100px;
+  }
+  /**
+   * SIDEBAR
+   */
+  .sidebar .sidebar-info .label {
+    right: -30px;
+    top: -30px;
+  }
+  .sidebar .sidebar-more-info .contact-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 15px;
+  }
+  /**
+   * NAVBAR
+   */
+  .navbar .navbar-list .navbar-item .navbar-link {
+    --fs-8: 15px;
+  }
+  /**
+   * ABOUT
+   */
+  /* testimonials modal */
+  .modal-container .testimonials-modal {
+    gap: 35px;
+    max-width: 680px;
+  }
+  .modal-container .testimonials-modal .modal-avatar-box img {
+    width: 80px;
+  }
+  /**
+   * PORTFOLIO
+   */
+  .portfolio .article-title {
+    margin-bottom: 20px;
+  }
+  .portfolio .projects .filter-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    padding-left: 5px;
+    margin-bottom: 30px;
+  }
+  .portfolio .projects .filter-list .filter-item button {
+    color: var(--light-gray);
+    font-size: var(--fs-5);
+    transition: var(--transition-1);
+  }
+  .portfolio .projects .filter-list .filter-item button:hover {
+    color: var(--light-gray-70);
+  }
+  .portfolio .projects .filter-list .filter-item button.active {
+    color: var(--orange-yellow-crayola);
+  }
+  .portfolio .projects .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Blog */
+  .blog .blog-posts .blog-posts-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  /**
+   * CONTACT
+   */
+  .contact .mapbox {
+    height: 380px;
+    border-radius: 18px;
+  }
+  .contact .contact-form .form .input-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact .contact-form .form .form-btn {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: auto;
+  }
+}
+/*
+ ----- MEDIA QUERY  1024px-----
+*/
+@media (min-width: 1024px) {
+  /**
+   * CUSTOM PROPERTY
+   */
+  :root {
+    /**
+    * shadow
+    */
+    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
+    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+  }
+  /**
+   * REUSED STYLE
+   */
+  .sidebar,
+article {
+    width: 950px;
+    box-shadow: var(--shadow-5);
+  }
+  /**
+   * MAIN 
+   */
+  main {
+    margin-bottom: 60px;
+  }
+  .main-content {
+    position: relative;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: auto;
+  }
+  /**
+   * NAVBAR
+   */
+  .navbar {
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border-radius: 0 20px;
+    padding: 0 20px;
+    box-shadow: none;
+  }
+  .navbar .navbar-list {
+    gap: 30px;
+    padding: 0 20px;
+  }
+  .navbar .navbar-list .navbar-item .navbar-link {
+    font-weight: var(--fw-500);
+  }
+  /**
+   * ABOUT
+   */
+  /* testimonials */
+  .testimonials .testimonials-list .testimonials-item {
+    min-width: calc(50% - 15px);
+  }
+  /*
+   ----- SERVICES -----
+  */
+  .service .service-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px;
+  }
+  /* clients */
+  .clients-item {
+    min-width: calc(25% - 38px);
+  }
+  /**
+   * PORTFOLIO
+   */
+  .portfolio .article-title {
+    margin-bottom: 20px;
+  }
+  .portfolio .projects .project-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /**
+   * BLOG
+   */
+  .blog .blog-posts .blog-posts-list .blog-post-item .blog-banner-box {
+    height: 230px;
+  }
+}
+@media (min-width: 1250px) {
+  /**
+   * RESET
+   */
+  body::-webkit-scrollbar {
+    width: 20px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--smoky-black);
+  }
+  body::-webkit-scrollbar-thumb {
+    border: 5px solid var(--smoky-black);
+    background: hsla(0deg, 0%, 100%, 0.1);
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 0 hsla(0deg, 0%, 100%, 0.11), inset -1px -1px 0 hsla(0deg, 0%, 100%, 0.11);
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background: hsla(0deg, 0%, 100%, 0.15);
+  }
+  body::-webkit-scrollbar-button {
+    height: 20px;
+  }
+  /**
+   * REUSED STYLE
+   */
+  .sidebar,
+article {
+    width: auto;
+  }
+  article {
+    min-height: 100%;
+  }
+  /**
+   * MAIN
+   */
+  main {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+  }
+  .main-content {
+    min-width: 75%;
+    width: 75%;
+    margin: 0;
+  }
+  /*
+   ----- ASIDE -----
+  */
+  .sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    height: 100%;
+    margin-bottom: 0;
+    z-index: 1;
+  }
+  .sidebar .sidebar-info {
+    flex-direction: column;
+  }
+  .sidebar .sidebar-info .separator:last-of-type {
+    margin: 15px 0;
+    opacity: 0;
+  }
+  .sidebar .sidebar-info .avatar-box img {
+    width: 150px;
+  }
+  .sidebar .sidebar-info .info-content .name {
+    white-space: nowrap;
+    text-align: center;
+  }
+  .sidebar .sidebar-info .info-content .title {
+    margin: auto;
+  }
+  .sidebar .sidebar-more-info .contact-list {
+    grid-template-columns: 1fr;
+  }
+  .sidebar .sidebar-more-info .contact-list .contact-item .contact-info .contact-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sidebar .sidebar-more-info .contact-list .contact-item .contact-info:is(.contact-link, time, address) {
+    --fs-7: 14px;
+    font-weight: var(--fw-300);
+  }
+  /*
+   ----- RESUME -----
+  */
+  .resume .timeline-item .timeline-text {
+    max-width: 700px;
   }
 }/*# sourceMappingURL=index.css.map */
